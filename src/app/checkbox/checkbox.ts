@@ -11,12 +11,12 @@ interface SelectItem {
 
 export const SELECTBUTTON_VALUE_ACCESSOR: any = {
   provide: NG_VALUE_ACCESSOR,
-  useExisting: forwardRef(() => Checkbox),
+  useExisting: forwardRef(() => ImageCheckbox),
   multi: true
 };
 
 @Component({
-    selector: 'app-checkbox',
+    selector: 'ng-image-checkbox',
     template: `
         <div class="row" [ngClass]="'ui-selectbutton ui-buttonset ui-corner-all ui-buttonset-' + options.length">
             <div *ngFor="let option of options; let i = index" class="ui-widget col-lg-3 col-md-4 col-sm-4 col-xs-6"
@@ -31,7 +31,7 @@ export const SELECTBUTTON_VALUE_ACCESSOR: any = {
     styleUrls: ['./checkbox.scss'],
     providers: [ObjectUtils,SELECTBUTTON_VALUE_ACCESSOR]
 })
-export class Checkbox implements ControlValueAccessor {
+export class ImageCheckbox implements ControlValueAccessor {
 
     @Input() tabindex: number;
 
@@ -150,7 +150,7 @@ export class Checkbox implements ControlValueAccessor {
 
 @NgModule({
     imports: [CommonModule],
-    exports: [Checkbox],
-    declarations: [Checkbox]
+    exports: [ImageCheckbox],
+    declarations: [ImageCheckbox]
 })
-export class SelectButtonModule { }
+export class ImageCheckboxModule { }

@@ -6,6 +6,9 @@
   height: 150px;
   margin-bottom: 10px;
 }
+.ui-helper-hidden-accessible{
+  display: none;
+}
 //Image Css
 .check-image:hover {
   -webkit-filter: brightness(1.2) grayscale(0.5) opacity(0.9);
